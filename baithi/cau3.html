@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function kiemTra(str1, str2) {
+        let count = 0;
+        if (str2.length <= str1.length) {
+            for (let i = 0; i < str1.length; i++) {
+                for (let j = 0; j <= i; j++) {
+                    if (str2[j] === str1[i]) {
+                        count++;
+                    }
+                }
+            }
+            if (count === str2.length) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    let str1 = [1, 2, 3, 4, 5];
+    let str2 = [1, 2, 3,4,6];
+    console.log(kiemTra(str1, str2));
+</script>
+</html>
